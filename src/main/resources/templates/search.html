@@ -38,6 +38,21 @@
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
+    <div th:if="${jobs != null}">
+        <h2>Results</h2>
+        <div th:each="job : ${jobs}">
+            <p>ID: <span th:text="${job.id}"></span></p>
+            <p>Name: <span th:text="${job.name}"></span></p>
+            <p>Employer: <span th:text="${job.employer?.value}"></span></p>
+            <p>Location: <span th:text="${job.location?.value}"></span></p>
+            <p>Position Type: <span th:text="${job.positionType?.value}"></span></p>
+            <p>Core Competency: <span th:text="${job.coreCompetency?.value}"></span></p>
+            <hr />
+        </div>
+    </div>
+
+
+
 </div>
 
 </body>
