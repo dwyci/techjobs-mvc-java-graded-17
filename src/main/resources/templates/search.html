@@ -38,13 +38,19 @@
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
 
-    <div th:if="${jobs != null}">
-        <h2>Results</h2>
+<!--    <div th:if="${jobs != null}">-->
+<!--        <h2>Results</h2>-->
 
-    </div>
-    <div th:if="${jobs != null}">
+
+<!--    </div>-->
+
+
+
         <h2>Results</h2>
-        <div th:replace="list-jobs :: job-results"></div>
+    <div th:if="${jobs != null}">
+        <div  th:replace="list-jobs :: job-results"></div>
+
+
     </div>
 
 
